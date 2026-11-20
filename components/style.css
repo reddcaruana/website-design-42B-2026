@@ -1,0 +1,53 @@
+/* CSS Reset
+    Clears out all the invisible styling */
+* {
+    box-sizing: border-box;
+    /* so everything sizes correctly */
+
+    margin: 0;
+    padding: 0;
+    /* cancel out the default styling */
+}
+
+body {
+    background-color: #12191f;
+    color: #e8edf2;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    padding: 1rem;
+    /* rem - root font size - 16px */
+}
+
+a {
+    color: #8ed8f8;
+    text-underline-offset: 0.2rem;
+}
+a:hover {
+    color: #bdeaff;
+}
+
+/* applies to multiple elements */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+ol, ul {
+    padding-left: 1rem;
+}
+
+.container {
+    max-width: 68rem; /* 1088px */
+    margin: auto;
+    /* horizontal margin */
+}
+
+.category {
+    background-color: #202b35;
+    padding: 1rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
