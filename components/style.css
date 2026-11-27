@@ -73,6 +73,10 @@ ol, ul {
     object-position: center;
 }
 
+.featured > .card-image {
+    aspect-ratio: 8 / 3;
+}
+
 .horizontal-card {
     display: flex;
     align-items: center;
@@ -80,4 +84,58 @@ ol, ul {
 
 .horizontal-card .card-image {
     width: 33%;
+}
+
+/******************** LAYOUT ********************/
+
+.flex-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* card needs to be a direct
+    child */
+.flex-collection > .card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* grow and shrink normally */
+
+    flex-basis: 15rem;
+    /* the min size of a card */
+}
+
+.grid-gallery {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* splits the grid into 3 fractions
+        using a repeat function */
+}
+
+.grid-gallery.responsive {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    
+    /* minmax() chooses a number between two values */
+    /* min() chooses the minimum between two values */
+}
+
+.grid-gallery .featured {
+    grid-column: span 2;
+    /* card goes over two columns */
+}
+
+/******************** TRANSITIONS ********************/
+
+.lift {
+    box-shadow: 0 2px 5px #ffffff20;
+    /* x y size color */
+
+    transition: box-shadow 180ms ease, translate 180ms ease;
+    /* property time style */
+}
+
+.lift:hover {
+    box-shadow: 0 5px 12px #ffffff40;
+    translate: 0 -0.25rem;
 }
